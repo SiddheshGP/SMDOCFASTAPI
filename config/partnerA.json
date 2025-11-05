@@ -1,0 +1,28 @@
+{
+  "required_fields": ["orderId", "priority", "tags", "customerInfo", "items", "riskAddress"],
+  "mappings": {
+    "orderId": "internal_order_id",
+    "priority": "processing_priority",
+    "tags": "internal_tags",
+    "customerInfo": "internal_customer_info",
+    "items": "internal_items",
+    "riskAddress": "internal_risk_address"
+  },
+  "field_types": {
+    "orderId": "number",
+    "priority": "string",
+    "tags": "array",
+    "customerInfo": "object",
+    "items": "array_of_object",
+    "riskAddress": {
+      "type": "object",
+      "schema": {
+        "address1": "string",
+        "street": "string",
+        "lane": "string",
+        "city": "string",
+        "postcode": "number"
+      }
+    }
+  }
+}
