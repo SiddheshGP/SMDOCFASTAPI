@@ -15,3 +15,14 @@
     }
   }
 }
+
+    @model_validator(mode="after")
+    def ensure_required_fields(self):
+        missing = []
+        if not self.externalRefId:
+            missing.append("externalRefId")
+        if not self.fileSource:
+            missing.append("fileSource")
+        if missing:
+            raise ValueError(f"Missing required fields: {', '.join(missing)}")
+        return self
