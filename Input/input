@@ -1,0 +1,17 @@
+{
+  "consumer_id": "partnerA",
+  "metadata": {
+    "orderId": 12345,
+    "priority": "high",
+    "tags": ["vip", "express"],
+    "customerInfo": {"name": "John", "region": "APAC"},
+    "items": [{"sku": "ABC", "qty": 2}],
+    "riskAddress": {
+      "address1": "Some Address",
+      "street": "Some Street",
+      "lane": "Some Lane",
+      "city": "Some City",
+      "postcode": 123456
+    }
+  }
+}
